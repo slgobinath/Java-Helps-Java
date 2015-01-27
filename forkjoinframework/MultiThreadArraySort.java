@@ -88,27 +88,29 @@ class MergeSort extends Thread {
      */
     private void merge(int left, int mid, int right) {
         int temp [] = new int[right - left + 1];
-        int i = left;
-        int j = mid + 1;
-        int k = 0;
-        while (i <= mid && j <= right) {
-            if (array[i] <= array[j]) {
-                temp[k] = array[i];
-                k++;
-                i++;
+        int x = left;
+        int y = mid + 1;
+        int z = 0;
+        while (x <= mid && y <= right) {
+            if (array[x] <= array[y]) {
+                temp[z] = array[x];
+                z++;
+                x++;
             } else {
-                temp[k] = array[j];
-                k++;
-                j++;
+                temp[z] = array[y];
+                z++;
+                y++;
             }
         }
-        while (j <= right) {
-            temp[k++] = array[j++];
+        while (y <= right) {
+            temp[z++] = array[y++];
         }
-        while (i <= mid) {
-            temp[k++] = array[i++];
+        while (x <= mid) {
+            temp[z++] = array[x++];
         }
 
-        for (k = 0; k < temp.length; k++) array[left + k] = temp[k];
+        for (z = 0; z < temp.length; z++) {
+            array[left + z] = temp[z];
+        }
     }
 }
