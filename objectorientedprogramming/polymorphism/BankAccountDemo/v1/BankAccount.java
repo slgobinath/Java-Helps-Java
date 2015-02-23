@@ -6,7 +6,7 @@
  */
 public class BankAccount {
     private String name;
-    private double balance;
+    protected double balance;
 
     public String getName() {
         return this.name;
