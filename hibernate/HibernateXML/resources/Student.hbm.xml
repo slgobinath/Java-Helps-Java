@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- class name is the fully qualified name of the POJO class -->
+	<!-- table is the name of the database table which represents the Student -->
+	<class name="com.javahelps.hibernate.Student" table="student">
+		<!-- Attribute id is mapped to the column student_id -->
+		<id name="id" type="integer">
+			<column name="student_id" />
+		</id>
+
+		<!-- Attribute name is mapped to the column student_name -->
+		<property name="name" type="string">
+			<column name="student_name" length="10" not-null="true" />
+		</property>
+
+		<!-- Attribute age is mapped to the column "student_age" -->
+		<property name="age" type="integer">
+			<column name="student_age" length="20" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
+

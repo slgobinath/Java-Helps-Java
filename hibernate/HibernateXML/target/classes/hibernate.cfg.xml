@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Create table if not exists -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- The JDBC driver of your database -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- Indicate the database to generate suitable SQL -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- The JDBC URL to the database instance -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/javahelps</property>
+		<!-- The database username -->
+		<property name="hibernate.connection.username">root</property>
+		<!-- The database password -->
+		<property name="hibernate.connection.password">root</property>
+		<!-- XML mapping file -->
+		<mapping resource="Student.hbm.xml"></mapping>
+	</session-factory>
+</hibernate-configuration>
