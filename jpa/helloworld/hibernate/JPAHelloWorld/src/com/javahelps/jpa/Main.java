@@ -46,9 +46,11 @@ public class Main {
     public static void create(int id, String name, int age) {
         // Create an EntityManager
         EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-        // Get a transaction
-        EntityTransaction transaction = manager.getTransaction();
+        EntityTransaction transaction = null;
+
         try {
+            // Get a transaction
+            transaction = manager.getTransaction();
             // Begin the transaction
             transaction.begin();
 
@@ -87,9 +89,11 @@ public class Main {
 
         // Create an EntityManager
         EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-        // Get a transaction
-        EntityTransaction transaction = manager.getTransaction();
+        EntityTransaction transaction = null;
+
         try {
+            // Get a transaction
+            transaction = manager.getTransaction();
             // Begin the transaction
             transaction.begin();
 
@@ -121,9 +125,11 @@ public class Main {
     public static void delete(int id) {
         // Create an EntityManager
         EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-        // Get a transaction
-        EntityTransaction transaction = manager.getTransaction();
+        EntityTransaction transaction = null;
+
         try {
+            // Get a transaction
+            transaction = manager.getTransaction();
             // Begin the transaction
             transaction.begin();
 
@@ -158,9 +164,11 @@ public class Main {
     public static void upate(int id, String name, int age) {
         // Create an EntityManager
         EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
-        // Get a transaction
-        EntityTransaction transaction = manager.getTransaction();
+        EntityTransaction transaction = null;
+
         try {
+            // Get a transaction
+            transaction = manager.getTransaction();
             // Begin the transaction
             transaction.begin();
 
