@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Jersey Demo</display-name>
+
+	<!-- Define ServletContainer of Jersey -->
+	<servlet>
+		<servlet-name>JerseyDemo</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<!-- Define the ResourceConfig class -->
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.javahelps.jerseydemo.app.HelloWorldApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Map all the URLs to the Jersey ServletContainer -->
+	<servlet-mapping>
+		<servlet-name>JerseyDemo</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+</web-app>
