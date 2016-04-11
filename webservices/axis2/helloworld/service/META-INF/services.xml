@@ -1,0 +1,6 @@
+<service>
+	<parameter locked="false" name="ServiceClass">HelloService</parameter>
+	<operation name="add">
+		<messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+	</operation>
+</service>
