@@ -1,0 +1,15 @@
+<serviceGroup>
+    <!-- Name of the service with the Axis2 session -->
+    <service name="SampleService" scope="transportsession">
+        <transports>
+            <transport>https</transport>
+        </transports>
+        <!-- Class which provides the service -->
+        <parameter name="ServiceClass">com.javahelps.samplecarbon.service.SampleService
+        </parameter>
+    </service>
+
+    <parameter name="adminService" locked="true">true</parameter>
+    <parameter name="hiddenService" locked="true">true</parameter>
+    <parameter name="AuthorizationAction" locked="true">/permission/protected/manage</parameter>
+</serviceGroup>
