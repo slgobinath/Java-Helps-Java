@@ -1,0 +1,16 @@
+<component xmlns="http://products.wso2.org/carbon">
+    <menus>
+        <menu>
+            <id>order_menu</id>
+            <i18n-key>order.menu</i18n-key>
+            <i18n-bundle>com.javahelps.samplecarbon.ui.i18n.Resources</i18n-bundle>
+            <parent-menu>manage_menu</parent-menu>
+            <link>../samplecarbon/index.jsp</link>
+            <region>region1</region>
+            <order>50</order>
+            <style-class>manage</style-class>
+            <icon>../samplecarbon/images/icon.png</icon>
+            <require-permission>/permission/protected/manage</require-permission>
+        </menu>
+    </menus>
+</component>
