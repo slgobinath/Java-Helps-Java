@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventPublisher name="com.javahelps.publisher.logger.Temperature"
+  statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventpublisher">
+  <from streamName="com.javahelps.stream.Temperature" version="1.0.0"/>
+  <mapping customMapping="disable" type="text"/>
+  <to eventAdapterType="logger"/>
+</eventPublisher>

@@ -1,0 +1,16 @@
+{
+  "name": "com.javahelps.stream.Temperature",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "location",
+      "type": "STRING"
+    },
+    {
+      "name": "temp",
+      "type": "INT"
+    }
+  ]
+}
