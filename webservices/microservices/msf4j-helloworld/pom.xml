@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.javahelps</groupId>
+	<artifactId>msf4j-helloworld</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- Define Java version and the MSF4J version -->
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<msf4j.version>2.2.2</msf4j.version>
+	</properties>
+
+	<!-- Use the WSO2's repository -->
+	<repositories>
+		<repository>
+			<id>wso2.releases</id>
+			<name>WSO2 Internal Repository</name>
+			<url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+		</repository>
+	</repositories>
+
+	<!-- Add the dependency -->
+	<dependencies>
+		<dependency>
+			<groupId>org.wso2.msf4j</groupId>
+			<artifactId>msf4j-core</artifactId>
+			<version>${msf4j.version}</version>
+		</dependency>
+	</dependencies>
+
+
+	<!-- Optionally deine the main class -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.javahelps.service.Application</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
